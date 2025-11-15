@@ -1,0 +1,14 @@
+FROM sharelatex/sharelatex:6.0
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr update --self
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install collection-langchinese # Contains ctex and gbt7714 bundles/packages
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install collection-basic       # Contains fontenc, keyval, graphicx, longtable, url, hyperref, geometry, fancyhdr
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install collection-latexextra  # Contains subfig, makecell, multirow, acronym, siunitx, caption, bicaption, tocbibind, titletoc, listings
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install collection-fontsextra  # Contains newtxmath
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install graphics               # Specific bundle name for graphicx
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install algorithms             # Contains algorithmic and algorithm
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install unicode-math           # Contains unicode-math, lm-math
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install mathtools              # Contains mathtools, mdwmath, eucal
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install xcolor                 # Specific bundle name for xcolor
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install xfrac                  # Specific bundle name for xfrac
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install enumitem               # Specific bundle name for enumitem
+RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install ieeetran               # Specific bundle name for IEEEtrantools
