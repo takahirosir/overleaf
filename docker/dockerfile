@@ -1,4 +1,4 @@
-FROM sharelatex/sharelatex:6.0
+FROM --platform=linux/amd64 sharelatex/sharelatex:6.0
 RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr update --self
 RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install collection-langchinese # Contains ctex and gbt7714 bundles/packages
 RUN /usr/local/texlive/2025/bin/x86_64-linux/tlmgr install collection-basic       # Contains fontenc, keyval, graphicx, longtable, url, hyperref, geometry, fancyhdr
